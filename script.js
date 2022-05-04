@@ -3,7 +3,7 @@ const http = require('http')
 const url = require('url')
 const fs = require('fs')
 
-function padTo2Digits(num) {
+const padTo2Digits = (num) => {
     return num.toString().padStart(2, '0');
 }
 
