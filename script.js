@@ -14,12 +14,6 @@ const formatDate = (date) => {
         date.getFullYear(),
     ].join('/');
 }
-
-const eliminadoExitoso = () => {
-    res.write('El archivo ha sido eliminado con extio')
-    res.end()
-}
-
 // 1. Crear un servidor en Node con el módulo http.
 http
     .createServer(function (req, res) {
@@ -77,7 +71,6 @@ http
         }
 
         // 5. Disponibilizar una ruta para eliminar un archivo, cuyo nombre es declarado en los parámetros de la consulta recibida.
-
         if (req.url.includes('/eliminar')) {
             fs.unlink(nombre, (err, data) => {
                 // 6. Devolver un mensaje declarando el éxito o fracaso de lo solicitado en cada consulta recibida.
